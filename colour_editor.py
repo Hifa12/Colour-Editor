@@ -20,7 +20,7 @@ img = imageio.imread('colours.jpg')
 plt.imshow(img)
 
 #Read colors.csv with pandas and giving columns names
-#colors.csv file retrieved from tutorial: https://data-flair.training/blogs/project-in-python-colour-detection/
+#colors.csv retrieved from github: https://github.com/codebrainz/color-names/blob/master/output/colors.csv
 columnnames =["colour","colour_name","hex","R","G","B"]
 csv = pd.read_csv('colors.csv', names=columnnames, header=None)
 
