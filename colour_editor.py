@@ -45,15 +45,15 @@ def onmouseclick(event):
     def onkeypress(event):
         if event.key == 'r':
             img = imageio.imread('colours.jpg')
-            img[ : , : , 2] = 255 #R is set at full intensity
+            img[ : , : , 2] = 255 #R is set at full intensity when r pressed
             cv2.imwrite('r_result.jpg',img)
         if event.key == 'g':
             img = imageio.imread('colours.jpg')
-            img[ : , : , 1] = 255 #G is set at full intensity
+            img[ : , : , 1] = 255 #G is set at full intensity when g pressed
             cv2.imwrite('g_result.jpg',img)
         if event.key == 'b':
             img = imageio.imread('colours.jpg')
-            img[ : , : , 0] = 255 #B is set at full intensity
+            img[ : , : , 0] = 255 #B is set at full intensity when b pressed
             cv2.imwrite('b_result.jpg',img)
     plt.gcf().canvas.mpl_connect('key_press_event', onkeypress)
 plt.gcf().canvas.mpl_connect('button_press_event', onmouseclick)
