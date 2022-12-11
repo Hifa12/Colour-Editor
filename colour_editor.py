@@ -40,22 +40,26 @@ def onmouseclick(event):
     colname = ColourName(rgbvals[0], rgbvals[1], rgbvals[2])
     print("RGB values of original image:",rgbvals)
     print("Colour name:",colname)
-    #Define a function so that RGB values are changed based on key pressed and
-    #new image is saved with changed RGB values
-    def onkeypress(event):
-        if event.key == 'r':
-            img = imageio.imread('colours.jpg')
-            img[ : , : , 2] = 255 #R is set at full intensity when r pressed
-            cv2.imwrite('r_result.jpg',img)
-        if event.key == 'g':
-            img = imageio.imread('colours.jpg')
-            img[ : , : , 1] = 255 #G is set at full intensity when g pressed
-            cv2.imwrite('g_result.jpg',img)
-        if event.key == 'b':
-            img = imageio.imread('colours.jpg')
-            img[ : , : , 0] = 255 #B is set at full intensity when b pressed
-            cv2.imwrite('b_result.jpg',img)
-    plt.gcf().canvas.mpl_connect('key_press_event', onkeypress)
+
+#Define a function so that RGB values are changed based on key pressed and
+#new image is saved with changed RGB values
+def onkeypress(event):
+    if event.key == 'r':
+        img = imageio.imread('colours.jpg')
+        img[ : , : , 2] = 255 #R is set at full intensity when r pressed
+        cv2.imwrite('r_result.jpg',img)
+    if event.key == 'g':
+        img = imageio.imread('colours.jpg')
+        img[ : , : , 1] = 255 #G is set at full intensity when g pressed
+        cv2.imwrite('g_result.jpg',img)
+    if event.key == 'b':
+        img = imageio.imread('colours.jpg')
+        img[ : , : , 0] = 255 #B is set at full intensity when b pressed
+        cv2.imwrite('b_result.jpg',img)
+
+#Apply function to change RGB values and save new image when key pressed
+plt.gcf().canvas.mpl_connect('key_press_event', onkeypress)
+#Apply function to print RGB values and colour name when image clicked
 plt.gcf().canvas.mpl_connect('button_press_event', onmouseclick)
 plt.title('Original Image')
 plt.show(block=True)
@@ -65,12 +69,12 @@ def newimclick(image, maxRGB):
     nimg = imageio.imread(image)
     plt.figure(figsize = (5,5))
     plt.imshow(nimg)
-    def onmouseclick(event):
+    def mouseclicknewim(event):
         rgbvals = event.inaxes.get_images()[0].get_cursor_data(event)
         colname = ColourName(rgbvals[0], rgbvals[1], rgbvals[2])
         print("RGB values when " + maxRGB + " is at full intensity:",rgbvals)
         print("Colour name:",colname)
-    plt.gcf().canvas.mpl_connect('button_press_event', onmouseclick)
+    plt.gcf().canvas.mpl_connect('button_press_event', mouseclicknewim)
     plt.title("Image With " + maxRGB + " at Full Intensity")
     plt.show(block=True)
 
