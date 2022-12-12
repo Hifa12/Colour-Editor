@@ -14,7 +14,7 @@ This project was created to obtain RGB (Red, Green, Blue) values and colour name
 ### Instructions
 * To run this project, download the ZIP file and run the python script (colour_editor.py) in the console.
 ```
-cd ~/path  #path to local folder where colour_editor.py was dowloaded.
+cd path  #path to local folder where colour_editor.py was dowloaded.
 sudo python3 colour_editor.py   
 #must type sudo as administrator access needed to alter the image, this prompts user to enter their password before running the script
 ```
