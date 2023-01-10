@@ -1,7 +1,7 @@
 # Colour-Editor
 ## This is a python console application that allows the user to obtain RGB values and colour names from an image and change the RGB values of the image.
 ### Description
-This project was created to obtain RGB (Red, Green, Blue) values and colour names of specific points in an image and to maximize the intensity of any of the RGB values. It is useful to know the RGB values of a specific colour from an image because it allows digital reproduction of the colour. Additionally, maximizing the different RGB values allows visualization of each individual value's impact on the colours displayed. I wanted to create this project to strengthen my Python programming skills, including working with image display and editing and reading CSV files in Python. 
+This project was created to obtain RGB (Red, Green, Blue) values and colour names of specific points in an image and to maximize the intensity of any of the RGB values. It is useful to know the RGB values of a specific colour from an image because it allows digital reproduction of the colour. Additionally, maximizing the different RGB values allows visualization of each individual value's impact on the colours displayed. I wanted to create this project to strengthen my Python programming skills, including working with image display and editing, and reading CSV files in Python. 
 ### Technologies
 * Python
 * Libraries used:
