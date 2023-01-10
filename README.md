@@ -22,9 +22,9 @@ sudo python3 colour_editor.py
 * Press 'r', 'g' or 'b' on your keyboard to save a new image with R, G or B values maximized, respectively. 
 * The new image will open in a new window, click anywhere on the image to obtain RGB values and colour name (displayed in the console).
 
-I have included the image I used in the application (colours.jpg) and the images I got after maximizing the R value (r_result.jpg), G value (g_result.jpg) and B value (b_result.jpg).
+I have included the image I used in the application (colours.jpg) and the new images saved after maximizing the R value (r_result.jpg), G value (g_result.jpg) and B value (b_result.jpg).
 
-You can also use your own image by saving it to the same file where the python script is saved and typing the image name into line 19 of the Python script.
+You can also use your own image by saving it to the same file where the python script is saved and typing the image file name into line 19 of the Python script.
 ### Credits
 * Learned how to code certain tasks from: https://data-flair.training/blogs/project-in-python-colour-detection/
 * colours.jpg obtained from: https://unsplash.com/photos/3k9PGKWt7ik
